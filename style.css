@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRhcmslMjBncmFkaWVudHxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+}
+#container{
+    height: 400px;
+    width: 350px;
+    background-color: lightseagreen;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+
+#container i{
+    color: #fff;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* cant't use transform multiple time so add scale with traform */
+    transform: translate(-50%,-50%) scale(0); 
+    opacity: 0;
+    transition: transform ease 0.5s;
+}
